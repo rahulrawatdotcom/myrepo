@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+{% extends 'base.html'%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Games</title>
+
+</head>
+<body>
+{% block body_block %}
+   <section id="head" style="background-color: red;height: 85px;" >
+   <div style="margin-right: 45px">
+   <div class="col-sm-4">
+            <nav aria-label="breadcrumb"><br><br>
+  <ol class="breadcrumb" style="width:120px;height: 35px;margin-left:0;background-color:crimson ">
+    <li class="breadcrumb-item active" aria-current="page"><i class="fas fa-bolt"></i>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<i class="far fa-plus-square"></i></li>
+  </ol>
+</nav>
+
+   </div>
+    <div class="col-sm-4"><br><br>
+   <i class="fas fa-user-circle po" style="font-size: 40px;margin-left: 40px;color: white"></i>
+</div>
+
+   </div>
+    <div class="col-sm-4">
+                     <nav aria-label="breadcrumb"><br><br>
+  <ol class="breadcrumb" style="width:120px;height: 35px;margin-right:300px;background-color:crimson ">
+    <li class="breadcrumb-item active" aria-current="page"><i class="fas fa-rupee-sign"></i>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<i class="far fa-plus-square"></i></li>
+  </ol>
+</nav>
+
+
+
+   </div>
+   </div>
+   </section>
+
+
+
+<br><br><br><br>
+
+
+  <section style="margin-right: 10px">
+        {% for i in allresult %}
+            <div class="col-sm-4" >
+            &nbsp
+
+          <div class="card" style="width:99px;">
+              <img class="card-img-top" src="/media/{{ i.gameimg }}" alt="Card image" style="width:97px;height:100px;">
+
+          </div>
+
+<h6 class="card-title"  ><b>{{ i.title }}</b></h6>
+<p class="card-text" style="width: 100%">{{ i.desc|slice:"0:15" }}</p>
+                </div>
+
+
+        {% endfor %}
+
+    </section>
+    <br><br><br><br>
+
+
+
+    <section id="footer" >
+
+    <div class="col-sm-2">
+        <i class="fas fa-gamepad hv"></i>
+        <p style="display: flex">All Games</p>
+
+
+    </div>
+    <div class="col-sm-2">
+        <i class="fab fa-foursquare"></i>
+        <p style="display: flex">Fantasy</p>
+
+    </div>
+    <div class="col-sm-2">
+        <i class="fas fa-history hi"></i>
+        <p style="display: flex">Game History</p>
+
+    </div>
+    <div class="col-sm-2">
+        <i class="fas fa-chess-queen li"></i>
+        <p style="display: flex">Leader Board</p>
+
+    </div>
+    <div class="col-sm-2">
+        <i class="fas fa-wallet wa"></i>
+        <p style="display: flex">Wallet</p>
+
+    </div>
+
+
+    </section>
+{% endblock %}
+</body>
+</html>
+
+

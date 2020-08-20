@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, ">
+    <title>Title</title>
+</head>
+<body>
+
+
+        <section style="display: flex;margin:10px;">
+    {% for i in pic|slice:"0:5"%}
+    <div class="offset-sm-3 col-sm-2 ">
+        <img class="card-img-top" src="/media/{{ i.img }}" alt="Card image" style="width:32px;height:30px;border-radius: 20px;margin: 5px">
+    <h5 class="card-title"  ><b>{{ i.title }}</b></h5>
+    </div>
+    {% endfor %}
+</section><br>
+<section style="display: flex;margin-left: 30px">
+    {% for i in pic|slice:"5:11"%}
+    <div class="offset-sm-3 col-sm-2 ">
+        <img class="card-img-top" src="/media/{{ i.img }}" alt="Card image" style="width:32px;height:30px;border-radius: 20px;margin: 5px">
+    <h5 class="card-title"  ><b>{{ i.title }}</b></h5>
+    </div>
+    {% endfor %}
+</section>
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+

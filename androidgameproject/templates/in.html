@@ -1,0 +1,107 @@
+<!doctype html>
+{% extends 'base.html' %}
+{% load static %}
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, ">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>HOME PAGE</title>
+          <meta charset="UTF-8">
+      <link rel="stylesheet" href="{% static 'css/base.css'  %}">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v7.0"></script>
+
+
+  </head>
+<body>
+{% block body_block %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+  <form method="get" action="/search" class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search" id="search" style="border-radius: 10px">
+
+  </form>
+        </div>
+        <div class="col-sm-3">
+    <form class="md-form">
+  <div class="file-field">
+    <div class="btn btn-outline-success btn-rounded waves-effect btn-sm float-left">
+
+      <input type="file" style="width:80px;background-color: red">
+    </div>
+    <div class="file-path-wrapper">
+
+    </div>
+  </div>
+</form>
+
+        </div>
+    </div>
+ <div  class="row" style="">
+    <div class="col-sm-10">
+      <ul >
+  <li ><a class="active" href="#home" >Home</a></li>
+  <li ><a href="#news"  >News</a></li>
+  <li ><a href="#contact" >Contact</a></li>
+  <li ><a href="#about" >About</a></li>
+</ul>
+    </div>
+    </div>
+ <div class="row mg">
+        <div class="col-sm-12">
+                  <div class="card fp3" >
+                      <a href="google.com"><img class="card-img" src="data:image/jpeg;base64,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" style="border-radius: 7px;"></a>
+  <div class="card-img-overlay">
+
+  </div>
+</div>
+
+        </div>
+    </div><br><br><br>
+
+   <div class="row md" style=" ">
+
+        <div class="col-sm-12 fl4" style="">
+            {% for i in Files|slice:"0:3" %}
+    <div class="col-sm-3" style=""><br>
+        <a href="/img/{{ i.id }}"><img  src="/media/{{ i.image }}" style="width:70px;height: 60px;border-radius: 9px;" ></a>
+    <h4 class="card-title"  ><b>{{ i.title }}</b></h4>
+<p class="card-text" style="width: 100%">{{ i.desc|slice:"0:15" }}</p>
+
+    </div>
+
+    {% endfor %}
+
+        </div>
+    </div><br>
+
+
+
+</div>
+    </body>
+{% endblock %}
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
